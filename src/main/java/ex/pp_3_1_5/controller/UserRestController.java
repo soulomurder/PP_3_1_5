@@ -26,15 +26,15 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-public class TheRestController {
+public class UserRestController {
     private final UserService userService;
     private final ModelMapper modelMapper;
     private final RoleRepository roleRepository;
     private final UserDetailsServiceImpl userDetailsServiceImpl;
 
     @Autowired
-    public TheRestController(UserService userService, ModelMapper modelMapper,
-                         RoleRepository roleRepository, UserDetailsServiceImpl userDetailsServiceImpl) {
+    public UserRestController(UserService userService, ModelMapper modelMapper,
+                              RoleRepository roleRepository, UserDetailsServiceImpl userDetailsServiceImpl) {
         this.modelMapper = modelMapper;
         this.userService = userService;
         this.roleRepository = roleRepository;
